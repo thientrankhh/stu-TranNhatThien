@@ -1,0 +1,27 @@
+.calculate {
+	width: 400px;
+	height: 270px;
+	border: 2px solid #5083BD;
+	padding: 0 10px;
+}
+.calculate h3{
+	text-align: center;
+}
+.calculate table tr{
+	width: 90%;
+}
+.calculate label {
+	font-weight: bold;
+}
+.calculate input {
+	width: 370px;
+	border: 1px solid #F79C3E;
+	padding: 5px 0;
+}
+
+.calculate button {
+	background: #D6F5FF;
+	border-top: 1px solid #73C8DB; 
+	border-bottom: 1px solid #73C8DB;
+	margin-left: 30px;
+}
