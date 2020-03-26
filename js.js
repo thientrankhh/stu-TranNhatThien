@@ -22,7 +22,11 @@ function multiplication() {
 function division() {
 	var firstnumber = parseFloat(document.getElementById('firstnumber').value);
 	var secondnumber = parseFloat(document.getElementById('secondnumber').value);
-	var result = firstnumber / secondnumber;
+	if (secondnumber == 0) {
+		var result = "Error. Enter value again !";
+	} else {
+		var result = firstnumber / secondnumber;
+	}
 	document.getElementById("result").innerHTML = result;
 }
 
