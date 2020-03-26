@@ -1,11 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Exercise 3</title>
-	<script type="text/javascript" src="js.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Exercise 3</title>
+    <script type="text/javascript" src="js.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 </head>
 <body>
-	<div id="demo"></div>
+<div class="container">
+    <h1>Click ở dưới để nhập thông tin !</h1>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" id="tab-javascript" data-toggle="tab"
+               href="#content-javascript"
+               role="tab" aria-controls="content-javascript" aria-selected="false">
+                Student
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="tab-css" data-toggle="tab"
+               href="#content-css"
+               role="tab" aria-controls="content-css" aria-selected="false">
+                Person
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade" id="content-javascript"
+             role="tabpanel" aria-labelledby="tab-javascript">
+            <div class="container card">
+                <h1>Info Student</h1>
+                <table class="font-weight-bold">
+                    <tr>
+                        <td>
+                            <label for="first_name" class="">First Name</label>
+                        </td>
+                        <td>
+                            <input type="text" id="first_name" placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="last_name">Last Name</label>
+                        </td>
+                        <td>
+                            <input type="text" id="last_name" placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gender">Gender</label>
+                        </td>
+                        <td>
+                            <select id="gender_p">
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="birthday">Birthday</label>
+                        </td>
+                        <td>
+                            <input type="date" id="birthday" placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="class1">Class</label>
+                        </td>
+                        <td>
+                            <input type="text" id="class1" placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="faculty">Faculty</label>
+                        </td>
+                        <td>
+                            <input type="text" id="faculty" placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="majours">Majours</label>
+                        </td>
+                        <td>
+                            <input type="text" id="majours" placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5 class="form-group">Enter Score</h5>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" class="form-control" id="score1" placeholder="Enter Score 1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" class="form-control" id="score2" placeholder="Enter Score 2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" class="form-control" id="score3" placeholder="Enter Score 3">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" name="action" class="btn btn-success px-5 py-2" onclick="getInfoStudent()">Sumbit</button>
+                        </td>
+                    </tr>
+                </table>
+                <div class="card-footer">
+                    <table class="table table-bordered">
+                        <h3>Info Student</h3>
+                        <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Birthday</th>
+                            <th>Gender</th>
+                            <th>Class</th>
+                            <th>Faculty</th>
+                            <th>Avergate Score</th>
+                            <th>Classify</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td id="info_fullname"></td>
+                            <td id="info_birthday"></td>
+                            <td id="info_gender"></td>
+                            <td id="info_class"></td>
+                            <td id="info_faculty"></td>
+                            <td id="info_avergate"></td>
+                            <td id="info_classsify"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="content-css"
+             role="tabpanel" aria-labelledby="tab-css">
+            <div class="container card">
+                <h1>Info Person</h1>
+                <table class="font-weight-bold">
+                    <tr>
+                        <td>
+                            <label for="first_name" class="">First Name</label>
+                        </td>
+                        <td>
+                            <input type="text" id="first_name_p" placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="last_name">Last Name</label>
+                        </td>
+                        <td>
+                            <input type="text" id="last_name_p" placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gender">Gender</label>
+                        </td>
+                        <td>
+                            <select id="gender_p">
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="birthday">Birthday</label>
+                        </td>
+                        <td>
+                            <input type="date" id="birthday_p" placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" name="action" class="btn btn-success px-5 py-2" onclick="getInfoPerson()">Sumbit</button>
+                        </td>
+                    </tr>
+                </table>
+                <div class="card-footer">
+                    <table class="table table-bordered">
+                        <h3>Info Student</h3>
+                        <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Birthday</th>
+                            <th>Gender</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td id="info_fullname_p"></td>
+                            <td id="info_birthday_p"></td>
+                            <td id="info_gender_p"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 </html>
